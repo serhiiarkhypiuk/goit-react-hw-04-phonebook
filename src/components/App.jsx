@@ -58,7 +58,11 @@ const App = () => {
         onChange={onSearch}
         required={false}
       />
-      {contacts.length === 0 && <p>No contacts in the list</p>}
+
+      {(contacts.length === 0) & (filter.length === 0) ? (
+        <p>No contacts in the list</p>
+      ) : null}
+
       {displayedContacts().length === 0 && filter.length > 0 ? (
         <p>No results for your search</p>
       ) : (
