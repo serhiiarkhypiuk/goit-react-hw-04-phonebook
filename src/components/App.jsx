@@ -29,6 +29,7 @@ const App = () => {
     }
 
     setContact(prevContacts => [data, ...prevContacts]);
+    setFilter('');
   };
 
   const onSearch = event => {
